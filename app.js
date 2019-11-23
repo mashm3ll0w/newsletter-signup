@@ -7,6 +7,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 const request = require("request");
 const port = 1108;
 
+app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/html/signup.html");
