@@ -36,10 +36,9 @@ app.post("/", (req, res) => {
 
 	var options = {
 		url: "https://us4.api.mailchimp.com/3.0/lists/10adaca160",
-    method: "POST",
-    user: "anonymous 3f2ac03ddb9435b21ca11ef31f8db82f-us4",
+		method: "POST",
 		headers: {
-			"Authorization": "bob1 3f2ac03ddb9435b21ca11ef31f8db82f-us4"
+			Authorization: "bob1 3f2ac03ddb9435b21ca11ef31f8db82f-us4"
 		},
 		body: jsonData
 	};
