@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 const request = require("request");
-const port = 1108;
+const port = process.env.PORT || 2525;
 
 app.use(express.static(__dirname)); // this looks at the entire directory
 //app.use(express.static("public")); // this points the app to look into a folder called "public" that will house the css,imgs etc.
