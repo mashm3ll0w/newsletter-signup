@@ -57,6 +57,10 @@ app.post("/", (req, res) => {
 	});
 });
 
+app.post("/fail", (req, res) => {
+  res.redirect("/");
+});
+
 app.listen(port, () => {
 	console.log(`Listening on port ${port}...`);
 });
