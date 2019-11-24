@@ -45,9 +45,14 @@ app.post("/", (req, res) => {
 
 	request(options, (error, response, body) => {
 		if (error) {
-			console.log(error);
+			res.sendFile(__dirname + "/html/fail.html");
 		} else {
-			console.log(response.statusCode);
+			if (response.statusCode === 200) {
+        res.sendFile(__dirname + "/html/success.html");
+      }
+      else{
+        res.sendFile(__dirname + ("/html/fail.html"));
+      }
 		}
 	});
 });
@@ -55,6 +60,3 @@ app.post("/", (req, res) => {
 app.listen(port, () => {
 	console.log(`Listening on port ${port}...`);
 });
-
-//APIKEY: 3f2ac03ddb9435b21ca11ef31f8db82f-us4
-//audience id: 10adaca160
